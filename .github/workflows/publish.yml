@@ -9,6 +9,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # Debe coincidir con el environment de la política de publicación de confianza del Marketplace.
+    environment: production
     permissions:
       contents: read
       id-token: write
