@@ -12,5 +12,5 @@
     "noEmit": true,
     "isolatedModules": true
   },
-  "include": ["src/**/*.ts", "src/**/*.vue", "../src/webview/protocol.ts", "../src/core/types.ts"]
+  "include": ["src/**/*.ts", "src/**/*.vue", "../src/webview/protocol.ts", "../src/core/types.ts", "../test/unit/webview.test.ts"]
 }

@@ -14,5 +14,5 @@
     "noEmit": true
   },
   "include": ["src", "test", "esbuild.mjs", "vitest.config.mts", "webview-ui/vite.config.mts"],
-  "exclude": ["test/fixtures"]
+  "exclude": ["test/fixtures", "test/unit/webview.test.ts"]
 }
