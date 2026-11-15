@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- 108 tests (controller, webview panel, Vue components, analysis and packages) with minimum coverage enforced on every release.
+- No behaviour changes.
+
 ## 0.1.0
 
 - First version: finds unused files (views, layouts, components, composables, stores, services, utilities, types, constants and test helpers) and unused npm packages.

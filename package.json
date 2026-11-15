@@ -2,7 +2,7 @@
   "name": "ballast-deadcode",
   "displayName": "Ballast — Unused Files and Packages",
   "description": "Find the files and npm packages your project no longer uses, and remove them safely.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "iamhenry",
   "license": "MIT",
   "icon": "media/icon.png",
