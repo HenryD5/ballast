@@ -1,0 +1,9 @@
+{
+  "command.analyze.title": "Find Unused Files and Packages",
+  "command.selectProject.title": "Select Project Folder",
+  "command.showLog.title": "Show Log",
+  "view.home.name": "Home",
+  "view.home.welcome": "Find the files and npm packages your project no longer uses. Ballast only reads your code until you choose what to remove.\n[Analyze project](command:ballast.analyze)\n[Select project folder](command:ballast.selectProject)\n[Show log](command:ballast.showLog)",
+  "configuration.language.description": "Language of the Ballast panel.",
+  "configuration.ignore.description": "Globs (relative to the project root) or package names that Ballast never reports, for example \"src/legacy/**\" or \"left-pad\"."
+}

@@ -1,0 +1,9 @@
+{
+  "command.analyze.title": "Buscar archivos y paquetes sin uso",
+  "command.selectProject.title": "Elegir carpeta del proyecto",
+  "command.showLog.title": "Ver registro",
+  "view.home.name": "Inicio",
+  "view.home.welcome": "Busca los archivos y paquetes npm que tu proyecto ya no usa. Ballast solo lee tu código hasta que eliges qué quitar.\n[Analizar proyecto](command:ballast.analyze)\n[Elegir carpeta del proyecto](command:ballast.selectProject)\n[Ver registro](command:ballast.showLog)",
+  "configuration.language.description": "Idioma del panel de Ballast.",
+  "configuration.ignore.description": "Globs (relativos a la raíz del proyecto) o nombres de paquete que Ballast nunca reporta, por ejemplo \"src/legacy/**\" o \"left-pad\"."
+}

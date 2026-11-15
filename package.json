@@ -1,0 +1,135 @@
+{
+  "name": "ballast-deadcode",
+  "displayName": "Ballast — Unused Files and Packages",
+  "description": "Find the files and npm packages your project no longer uses, and remove them safely.",
+  "version": "0.1.0",
+  "publisher": "iamhenry",
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HenryD5/ballast.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HenryD5/ballast/issues"
+  },
+  "homepage": "https://github.com/HenryD5/ballast#readme",
+  "engines": {
+    "vscode": "^1.95.0",
+    "node": ">=20"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "keywords": [
+    "unused files",
+    "dead code",
+    "unused dependencies",
+    "vue",
+    "vite",
+    "cleanup",
+    "npm"
+  ],
+  "galleryBanner": {
+    "color": "#0e2a47",
+    "theme": "dark"
+  },
+  "main": "./dist/extension.js",
+  "bin": {
+    "ballast": "dist/cli.js"
+  },
+  "activationEvents": [],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "Ballast only reads the project to analyze it. Removing files or uninstalling packages requires a trusted workspace."
+    }
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ballast",
+          "title": "Ballast",
+          "icon": "media/activity-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "ballast": [
+        {
+          "id": "ballast.home",
+          "name": "%view.home.name%"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "ballast.home",
+        "contents": "%view.home.welcome%"
+      }
+    ],
+    "commands": [
+      {
+        "command": "ballast.analyze",
+        "title": "%command.analyze.title%",
+        "category": "Ballast"
+      },
+      {
+        "command": "ballast.selectProject",
+        "title": "%command.selectProject.title%",
+        "category": "Ballast"
+      },
+      {
+        "command": "ballast.showLog",
+        "title": "%command.showLog.title%",
+        "category": "Ballast"
+      }
+    ],
+    "configuration": {
+      "title": "Ballast",
+      "properties": {
+        "ballast.language": {
+          "type": "string",
+          "enum": [
+            "es",
+            "en"
+          ],
+          "default": "es",
+          "description": "%configuration.language.description%"
+        },
+        "ballast.ignore": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "%configuration.ignore.description%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.mjs && vite build --config webview-ui/vite.config.mts",
+    "watch": "node esbuild.mjs --watch",
+    "typecheck": "tsc --noEmit && vue-tsc --noEmit -p webview-ui/tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "package": "npx --yes @vscode/vsce@3.9.2 package --no-dependencies",
+    "vscode:prepublish": "node esbuild.mjs --production && vite build --config webview-ui/vite.config.mts",
+    "build:webview": "vite build --config webview-ui/vite.config.mts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/vscode": "~1.95.0",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vscode/codicons": "^0.0.46-24",
+    "esbuild": "^0.28.2",
+    "typescript": "~5.9.3",
+    "vite": "^6.4.5",
+    "vitest": "^4.1.12",
+    "vue": "^3.5.44",
+    "vue-tsc": "^3.3.14"
+  }
+}
